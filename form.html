@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TBHK — Summon Registration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">七<span>番</span> TBHK</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Profile</a></li>
+      <li><a href="form.html" class="active">Register</a></li>
+      <li><a href="https://tbhk.fandom.com/wiki/Hanako" target="_blank">Wiki ↗</a></li>
+    </ul>
+  </nav>
+
+  <!-- FORM HERO -->
+  <div class="form-hero">
+    <div class="hero-bg-text" style="font-size:clamp(50px,10vw,120px); opacity:0.4;">契約</div>
+    <div class="section-tag" style="margin: 0 auto 16px; display:inline-flex;">✦ Spirit Contract</div>
+    <h1 class="form-hero-title">Summon <span class="accent-gold">Registration</span></h1>
+    <p class="form-hero-sub">Submit your wish to the seventh mystery</p>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-container">
+    <div class="form-card">
+
+      <!-- Form Header -->
+      <div class="form-card-header">
+        <span class="form-card-header-icon">📜</span>
+        <div>
+          <div class="form-card-title">Binding Contract</div>
+          <div class="form-card-subtitle">All fields marked ✦ are required</div>
+        </div>
+      </div>
+
+      <!-- Form Body -->
+      <div class="form-body">
+
+        <!-- Name -->
+        <div class="form-group">
+          <label class="form-label" for="name">Full Name <span class="required">✦</span></label>
+          <input type="text" id="name" class="form-input" placeholder="e.g. Yashiro Nene" required />
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address <span class="required">✦</span></label>
+          <input type="email" id="email" class="form-input" placeholder="nene@kamome.ac.jp" required />
+        </div>
+
+        <!-- School Year (Dropdown) -->
+        <div class="form-group">
+          <label class="form-label" for="year">School Year <span class="required">✦</span></label>
+          <div class="select-wrap">
+            <select id="year" class="form-select" required>
+              <option value="" disabled selected>— Select your year —</option>
+              <option value="1">1st Year</option>
+              <option value="2">2nd Year</option>
+              <option value="3">3rd Year</option>
+              <option value="staff">Staff / Teacher</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Club (Dropdown) -->
+        <div class="form-group">
+          <label class="form-label" for="club">Club / Activity</label>
+          <div class="select-wrap">
+            <select id="club" class="form-select">
+              <option value="" disabled selected>— Select your club —</option>
+              <option value="broadcast">Broadcasting Club</option>
+              <option value="art">Art Club</option>
+              <option value="drama">Drama Club</option>
+              <option value="none">No Club</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-divider"></div>
+
+        <!-- Favorite Mystery (Radio) -->
+        <div class="form-group">
+          <label class="form-label">Favorite School Mystery <span class="required">✦</span></label>
+          <div class="radio-group">
+            <label class="radio-item">
+              <input type="radio" name="mystery" value="hanako" />
+              👻 No. 7 — Hanako-kun (The Toilet)
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="mystery" value="misaki" />
+              🪞 No. 2 — Misaki Stairs
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="mystery" value="mokke" />
+              🐾 Mokke Spirits
+            </label>
+            <label class="radio-item">
+              <input type="radio" name="mystery" value="other" />
+              ✨ Other Mystery
+            </label>
+          </div>
+        </div>
+
+        <div class="form-divider"></div>
+
+        <!-- Interests (Checkbox) -->
+        <div class="form-group">
+          <label class="form-label">Areas of Interest <span class="required">✦</span></label>
+          <div class="checkbox-group inline">
+            <label class="checkbox-item">
+              <input type="checkbox" name="interest" value="supernatural" />
+              Supernatural
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="interest" value="manga" />
+              Manga / Anime
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="interest" value="folklore" />
+              Japanese Folklore
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="interest" value="art" />
+              Watercolor Art
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="interest" value="mystery" />
+              Mystery Genre
+            </label>
+          </div>
+        </div>
+
+        <!-- Wish / Message -->
+        <div class="form-group">
+          <label class="form-label" for="wish">Your Wish <span class="required">✦</span></label>
+          <textarea id="wish" class="form-textarea" placeholder="State your wish to Hanako-kun... (what would you like him to grant?)" required></textarea>
+        </div>
+
+      </div><!-- /form-body -->
+
+      <!-- Form Footer -->
+      <div class="form-footer">
+        <span class="form-footer-note">⚠ Wishes cannot be undone once granted.</span>
+        <button class="btn-submit" onclick="handleSubmit()">✦ Submit Contract</button>
+      </div>
+
+    </div><!-- /form-card -->
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <span>✦</span>
+    <span id="toast-msg">Contract submitted successfully!</span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>✦ 花子くん — TBHK Fan Page ✦ &nbsp;|&nbsp; <a href="index.html">← Back to Profile</a></p>
+    <p style="margin-top:6px;">PDW_A_NIM &nbsp;·&nbsp; Kamome Academy</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

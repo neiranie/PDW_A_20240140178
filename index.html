@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TBHK — Hanako-kun Profile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">七<span>番</span> TBHK</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Profile</a></li>
+      <li><a href="form.html">Register</a></li>
+      <li><a href="https://tbhk.fandom.com/wiki/Hanako" target="_blank">Wiki ↗</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-text">七番</div>
+
+    <div class="hero-content">
+      <!-- Left: Info -->
+      <div class="hero-info stagger-in">
+        <div class="section-tag">✦ No. 7 School Mystery</div>
+
+        <h1 class="hero-title">
+          <span class="accent-gold">HANAKO</span><br>
+          <span class="accent-sky">-KUN</span>
+        </h1>
+
+        <p class="hero-subtitle">花子くん — Toilet Bound</p>
+
+        <p class="hero-desc">
+          The seventh school mystery who haunts the third-floor girls' bathroom.
+          Bound to the school, Hanako-kun serves as the boundary between the
+          living and the supernatural — cheerful on the surface, ancient in secret.
+        </p>
+
+        <div class="hero-actions">
+          <a href="form.html" class="btn btn-gold">✦ Register Now</a>
+          <a href="https://tbhk.fandom.com/wiki/Hanako" target="_blank" class="btn btn-outline">View Wiki ↗</a>
+        </div>
+      </div>
+
+      <!-- Right: Profile Card -->
+      <div class="animate-float">
+        <div class="profile-card">
+          <!-- Card Header -->
+          <div class="card-header">
+            <div class="card-badge">Profile</div>
+            <div class="card-name">HANAKO</div>
+            <div class="card-subtitle">SCHOOL MYSTERY NO. 7</div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <div class="card-type">
+              <span class="card-type-label">Affiliation</span>
+              <span class="card-type-value">Boundary</span>
+            </div>
+          </div>
+
+          <!-- Card Body with Tabs -->
+          <div class="card-body">
+            <div class="tab-nav">
+              <button class="tab-btn active" onclick="switchTab(event, 'tab-info')">Info</button>
+              <button class="tab-btn" onclick="switchTab(event, 'tab-skills')">Skills</button>
+              <button class="tab-btn" onclick="switchTab(event, 'tab-stats')">Stats</button>
+            </div>
+
+            <!-- Tab: Info -->
+            <div id="tab-info" class="tab-content active">
+              <div class="avatar-wrap">
+                <div class="avatar">
+                  <span class="avatar-placeholder">👻</span>
+                </div>
+              </div>
+              <p class="char-desc">Hanako-kun is a supernatural entity in</p>
+              <p class="char-title-big">Toilet-Bound Hanako-kun</p>
+
+              <div class="talent-grid">
+                <div class="talent-card">
+                  <div class="talent-card-header">
+                    <span class="talent-icon">⚡</span>
+                    <span class="talent-name">Supernatural Power</span>
+                  </div>
+                  <div class="talent-value">MAX</div>
+                </div>
+                <div class="talent-card">
+                  <div class="talent-card-header">
+                    <span class="talent-icon">📖</span>
+                    <span class="talent-name">The 4 Regulations</span>
+                  </div>
+                  <div class="talent-value">★ No.7</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab: Skills -->
+            <div id="tab-skills" class="tab-content">
+              <div class="skill-grid">
+                <div class="skill-icon">
+                  <span class="skill-icon-emoji">🕯️</span>
+                  <span class="skill-icon-name">Boundary Control</span>
+                </div>
+                <div class="skill-icon">
+                  <span class="skill-icon-emoji">🔪</span>
+                  <span class="skill-icon-name">Blade Mastery</span>
+                </div>
+                <div class="skill-icon">
+                  <span class="skill-icon-emoji">🌸</span>
+                  <span class="skill-icon-name">Mokke Command</span>
+                </div>
+                <div class="skill-icon">
+                  <span class="skill-icon-emoji">⛩️</span>
+                  <span class="skill-icon-name">Yorishiro Seal</span>
+                </div>
+                <div class="skill-icon">
+                  <span class="skill-icon-emoji">🌙</span>
+                  <span class="skill-icon-name">Time Alter</span>
+                </div>
+                <div class="skill-icon">
+                  <span class="skill-icon-emoji">✨</span>
+                  <span class="skill-icon-name">Wish Grant</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab: Stats -->
+            <div id="tab-stats" class="tab-content">
+              <div class="stat-area">
+                <div class="stat-label">統計 Statistics</div>
+                <div class="stat-bars">
+                  <div class="stat-row">
+                    <span class="stat-name">Power</span>
+                    <div class="stat-bar-track">
+                      <div class="stat-bar-fill" style="width:95%; --delay:0.1s"></div>
+                    </div>
+                    <span class="stat-val">95</span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-name">Speed</span>
+                    <div class="stat-bar-track">
+                      <div class="stat-bar-fill" style="width:88%; --delay:0.2s"></div>
+                    </div>
+                    <span class="stat-val">88</span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-name">Mystery</span>
+                    <div class="stat-bar-track">
+                      <div class="stat-bar-fill" style="width:100%; --delay:0.3s"></div>
+                    </div>
+                    <span class="stat-val">∞</span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-name">Charisma</span>
+                    <div class="stat-bar-track">
+                      <div class="stat-bar-fill" style="width:82%; --delay:0.4s"></div>
+                    </div>
+                    <span class="stat-val">82</span>
+                  </div>
+                  <div class="stat-row">
+                    <span class="stat-name">Wisdom</span>
+                    <div class="stat-bar-track">
+                      <div class="stat-bar-fill" style="width:90%; --delay:0.5s"></div>
+                    </div>
+                    <span class="stat-val">90</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /card-body -->
+        </div><!-- /profile-card -->
+      </div>
+    </div><!-- /hero-content -->
+  </section>
+
+  <!-- INFO SECTION -->
+  <div class="section">
+    <h2 class="section-title">About the Series</h2>
+    <div class="section-divider"></div>
+    <div class="info-grid stagger-in">
+      <div class="info-card">
+        <div class="info-card-icon">📚</div>
+        <div class="info-card-title">Manga</div>
+        <p class="info-card-text">Written and illustrated by AidaIro. Published in Monthly GFantasy since 2014. Over 20 volumes released worldwide.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">🎬</div>
+        <div class="info-card-title">Anime</div>
+        <p class="info-card-text">Animated by Lerche Studio (2020). Known for its unique watercolor-inspired visual style and atmospheric storytelling.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">👻</div>
+        <div class="info-card-title">7 Mysteries</div>
+        <p class="info-card-text">Seven supernatural entities bound to Kamome Academy. Each controls a specific domain and Yorishiro artifact within the school.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>✦ 花子くん — TBHK Fan Page ✦ &nbsp;|&nbsp; <a href="form.html">Register</a> &nbsp;|&nbsp; <a href="https://tbhk.fandom.com" target="_blank">TBHK Wiki</a></p>
+    <p style="margin-top:6px;">Made with Bootstrap spirit &amp; TBHK soul &nbsp;·&nbsp; PDW_A_20240140178</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
